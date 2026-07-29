@@ -1,5 +1,7 @@
 from datetime import date
+
 from pydantic import BaseModel, ConfigDict
+
 
 class CardBase(BaseModel):
     member: str

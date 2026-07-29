@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from app.database import get_db, engine, Base
-from app.routers import cards, auth
 
+from app.database import Base, engine
+from app.routers import auth, cards
 
 app = FastAPI(title="Photocard Collection API")
 

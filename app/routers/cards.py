@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from app import models
-from app.database import get_db
-from app.schemas import CardCreate, CardUpdate, CardOut
 from app.auth import get_current_user
+from app.database import get_db
+from app.schemas import CardCreate, CardOut, CardUpdate
 
 router = APIRouter(prefix="/cards", tags=["cards"])
 

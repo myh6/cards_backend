@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta, timezone
+
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
-from jose import jwt, JWTError
+from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
-from app.database import get_db
+
 from app import models
+from app.database import get_db
 
 SECRET_KEY = "change-me" # real apps: load from .env
 ALGORITHM = "HS256"
