@@ -8,8 +8,9 @@ from sqlalchemy.orm import Session
 
 from app import models
 from app.database import get_db
+import os
 
-SECRET_KEY = "change-me" # real apps: load from .env
+SECRET_KEY = os.getenv("SECRET_KEY", "dev-only-fallback")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
