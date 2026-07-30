@@ -9,7 +9,6 @@ from sqlalchemy.orm import Session
 
 from app import models
 from app.database import get_db
-import os
 
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-only-fallback")
 ALGORITHM = "HS256"
